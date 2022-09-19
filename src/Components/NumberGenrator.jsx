@@ -9,7 +9,8 @@ export default class NumberGenrator extends Component {
         }
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(){
+
         if (this.state.num <= 5) {
             throw new Error("Number less than 6");
         }
@@ -28,7 +29,7 @@ export default class NumberGenrator extends Component {
                 <h1>
                     {this.state.num}
                 </h1>
-                <button onClick={() => this.updateNum()}> Generate Number</button>
+                <button onClick={()=>this.updateNum()}> Generate Number</button>
             </>
         )
     }
